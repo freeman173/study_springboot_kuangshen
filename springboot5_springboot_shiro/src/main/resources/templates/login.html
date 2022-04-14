@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>超人在登录页</title>
+</head>
+<body>
+
+<!--用户登录出错的反馈需要展示一下！！-->
+<p th:text="${msg}" style="color: red"></p>
+
+<form th:action="@{/login}">
+    <p>用户名：<input type="text" name="username"></p>
+    <p>密码：<input type="password" name="password"></p>
+    <p><input type="submit"></p>
+</form>
+
+
+</body>
+</html>

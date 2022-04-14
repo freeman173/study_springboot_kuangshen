@@ -1,0 +1,123 @@
+##基本语法
+## 普通键值对
+#name:jc
+##对象
+#student:
+#  name:jc
+#  age:18
+##行内写法
+#student:{name:jc,age:17}
+##数组
+#pets:[cat,dog,pig]
+
+
+
+
+
+#在这里配置实体类的值，然后再通过框架传过去。
+#person:
+#  #在姓名后加一个uuid赋值。
+#  name: 1669792108@qq.com
+#  age: 3
+#  happy: false
+#  bitrh: 2019/11/02
+#  maps: {k1:v1,k2:v2}
+#  lists: [1,2,3,4,5]
+#  dog:
+#    name: 刘琪
+#    age: 24
+#
+
+#项目的启动端口
+#server:
+#  port: 8082
+
+
+
+#多环境配置：测试环境与开发环境。
+#spring:
+#  profiles:
+#    active: dev
+
+
+#配置文件的作用：
+    #在spring-boot-autoconfigure库中，有许多框架启动将要装配的类。
+    #如果你想要改变这些类中的一些属性，可以在这里事先配置好，然后等框架启动时，将它们加进去。
+#点击Ctrl+鼠标左键即可查看对应类的构造
+server:
+  port: 8080
+  servlet:
+    #配置项目总的访问路径
+    context-path: /demo1
+#可以查看哪些类被手动配置过
+#debug: true
+
+
+#关闭模板引擎的缓冲,有助于页面调试
+spring:
+  thymeleaf:
+    cache: false
+#    解决框架的默认日期格式问题（根据前端的格式需求来配置）
+  mvc:
+    date-format: yyyy-MM-dd
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/yuangong
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#整合mybatis
+mybatis:
+  type-aliases-package: com.example.spring_boot_demo1.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+#  configuration:
+#    map-underscore-to-camel-case: true
+#  驼峰命名规则的声明
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+server:
+  port: 8081
+
+
+#注册服务
+dubbo:
+  application:
+    name: priovder-server
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  scan:
+    base-packages: com.jc.providerserver.service

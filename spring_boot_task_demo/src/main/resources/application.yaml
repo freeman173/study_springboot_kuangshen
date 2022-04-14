@@ -1,0 +1,11 @@
+#配置邮件信箱
+spring:
+  mail:
+    username: 1669792108@qq.com
+    password: ndjazupsgecwbbhd
+    host: smtp.qq.com
+#    开启加密验证
+    properties:
+      mail.smtp.ssl.enable: true
+
+

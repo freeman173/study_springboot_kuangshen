@@ -1,0 +1,15 @@
+异步任务：
+    程序的执行是一条主线，当执行到需要获取数据等功能时需要花费时间，但又不能让用户干等着，于是就把获取数据的功能放到一个单独线程里，
+继续执行后面的任务。
+
+邮箱stmp密码：ndjazupsgecwbbhd
+
+
+定时任务：
+    TaskScheduler 任务调度者
+    TaskExecutor  任务执行者
+
+    @EnableScheduling 开启定时功能
+    @Scheduled  什么时候执行
+
+    Cron表达式

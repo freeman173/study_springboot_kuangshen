@@ -1,0 +1,9 @@
+##后面再来写
+#log4j:
+#  rootLogger: INFO, stdout
+#  appender.stdout: org.apache.log4j.ConsoleAppender
+#  appender.stdout.layout: org.apache.log4j.PatternLayout
+#  appender.stdout.ConversionPattern: %d %p [%c] - %m %n
+#
+#  logger.org.apache: WARN
+#  logger.org.springframework:
