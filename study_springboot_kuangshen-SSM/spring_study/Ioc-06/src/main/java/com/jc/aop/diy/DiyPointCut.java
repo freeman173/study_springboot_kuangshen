@@ -1,0 +1,20 @@
+package com.jc.aop.diy;
+
+
+/*
+
+自定义aop接口
+ */
+public class DiyPointCut {
+
+    public void before(){
+
+        System.out.println("————方法执行前————");
+    }
+
+    public void after(){
+
+        System.out.println("————方法执行后————");
+    }
+
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--
+    spring的ioc容器:
+            工厂模式生产配置项目所需对象
+
+    -->
+
+
+    <!--
+    构造器注入
+    -->
+    <bean id="teacher" class="com.jc.pojo.Teacher" scope="prototype">
+        <constructor-arg name="age" value="23"/>
+        <constructor-arg name="name" value="jc"/>
+
+    </bean>
+
+
+
+<!--
+set注入
+-->
+    <bean id="student" class="com.jc.pojo.Student">
+        <property name="name" value="jc"/>
+        <property name="wife" value="xx"/>
+        <property name="books">
+           <array>
+               <value>《三国演义》</value>
+               <value>《西游记》</value>
+               <value>《红楼梦》</value>
+               <value>《水浒传》</value>
+           </array>
+        </property>
+
+        <property name="hobbys">
+            <list>
+                <value>打羽毛球球</value>
+                <value>听歌</value>
+            </list>
+        </property>
+
+        <property name="card">
+            <map>
+                <entry key="得到" value="方法"/>
+                <entry key="让人" value="官方"/>
+            </map>
+        </property>
+
+        <property name="games">
+            <set>
+                <value>《王者荣耀》</value>
+                <value>《穿越火线》</value>
+            </set>
+        </property>
+
+    </bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>

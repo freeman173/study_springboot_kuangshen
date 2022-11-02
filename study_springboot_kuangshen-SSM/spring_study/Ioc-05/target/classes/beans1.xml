@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:aop="http://www.springframework.org/schema/aop"
+           xmlns:context="http://www.springframework.org/schema/context"
+           xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+<!--
+
+aop的原始实现
+
+-->
+
+<!--    注册bean-->
+    <bean id="userService" class="com.jc.aop.UserServiceImpl"/>
+    <bean id="log" class="com.jc.aop.log.Log"/>
+    <bean id="afterlog" class="com.jc.aop.log.AfterLog"/>
+
+
+
+<!-- 导入aop配置 -->
+    <aop:config>
+
+    <!--
+        配置切入点：
+    -->
+        <aop:pointcut id="pointcut1" expression="execution(* com.jc.aop.UserServiceImpl.add())"/>
+        <aop:pointcut id="pointcut2" expression="execution(* com.jc.aop.UserServiceImpl.update())"/>
+<!--
+           执行环绕增加：
+ -->
+        <aop:advisor advice-ref="log" pointcut-ref="pointcut1"/>
+        <aop:advisor advice-ref="afterlog" pointcut-ref="pointcut2"/>
+
+    </aop:config>
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+<!--
+spring的ioc容器:
+        工厂模式生产配置项目所需对象
+
+-->
+
+
+
+<!--    dao层的实例对象-->
+    <bean id="daoImpl" class="com.jc.dao.impl.UserDaoImpl"/>
+    <bean id="jcImpl" class="com.jc.dao.impl.UserJcImpl"/>
+    <bean id="mysqlImpl" class="com.jc.dao.impl.UserMysqlImpl"/>
+
+<!--
+    service的实例对象:
+            id：对象实例在ioc中的姓名
+            ref:引用ioc创建好的对象
+            value：一个具体值
+
+-->
+    <bean id="userServiceImpl" class="com.jc.service.impl.UserServiceImpl">
+      <property name="userDao" ref="jcImpl"/>
+
+    </bean>
+
+
+
+
+
+
+
+</beans>

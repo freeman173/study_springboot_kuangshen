@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+<!--    自动扫描包：让指定包下的注解生效，由ioc统一管理-->
+    <context:component-scan base-package="com.jc.controller"/>
+
+<!--    让springmvc不处理动态资源    -->
+    <mvc:default-servlet-handler/>
+
+<!--
+
+
+-->
+    <mvc:annotation-driven/>
+
+
+
+<!--    视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+<!--
+配置拦截器
+-->
+
+    <mvc:interceptors>
+<!--        单个拦截器-->
+        <mvc:interceptor>
+<!--            拦截所有的请求-->
+            <mvc:mapping path="/user/**"/>
+
+            <mvc:exclude-mapping path="/user/toLogin"/>
+            <mvc:exclude-mapping path="/user/login"/>
+<!--            拦截器的具体执行类     -->
+            <bean class="com.jc.config.MyInterceptor"/>
+        </mvc:interceptor>
+
+
+    </mvc:interceptors>
+
+
+
+</beans>

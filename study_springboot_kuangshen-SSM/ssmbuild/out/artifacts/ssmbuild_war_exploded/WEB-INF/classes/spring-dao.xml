@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+<!--
+
+spring整合mybatis
+
+-->
+<!--    1、关联database.properties文件-->
+<!--    <context:property-placeholder location="database.properties"/>-->
+
+
+
+<!-- 2、 配置数据库连接池：
+                dbcp：半自动化操作！
+                c3p0:自动化操作（可以自动加载配置文件并生成类）
+                druid:
+
+     -->
+<!--    <bean id="datasource" class=" com.mchange.v2.c3p0.ComboPooledDataSource">-->
+<!--        <property name="driverClass" value="com.mysql.jdbc.Driver"/>-->
+<!--        <property name="jdbcUrl" value="dbc:mysql://localhost:3306/ssmbuild?useSSL=true"/>-->
+<!--        <property name="user" value="root"/>-->
+<!--        <property name="password" value="123456"/>-->
+
+<!--&lt;!&ndash;        C3PO的一些私有属性&ndash;&gt;-->
+<!--        <property name="maxPoolSize" value="20"/>-->
+<!--        <property name="minPoolSize" value="10"/>-->
+<!--&lt;!&ndash;        关闭连接后不自动commit&ndash;&gt;-->
+<!--        <property name="autoCommitOnClose" value="false"/>-->
+<!--        <property name="checkoutTimeout" value="10000"/>-->
+<!--        <property name="acquireRetryAttempts" value="2"/>-->
+<!--    </bean>-->
+
+    <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/ssmbuild"/>
+        <property name="username" value="root"/>
+        <property name="password" value="123456"/>
+    </bean>
+
+    <!--
+    3、再配置一个sqlSessionFactory
+        -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" scope="prototype">
+        <!--        绑定上面的数据源-->
+        <property name="dataSource" ref="datasource"/>
+        <!--        绑定mybatis的配置文件-->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <!--绑定映射文件-->
+        <!--        <property name="mapperLocations" value="classpath:com/jc/mapper/*.xml"/>-->
+
+    </bean>
+
+
+<!--
+4、配置dao接口扫描包:将DAO接口动态地注入到spring容器:
+        MapperScannerConfigurer是为了解决MapperFactoryBean繁琐而生的，有了MapperScannerConfigurer就不需要我们去
+    为每个映射接口去声明一个bean了。大大缩减了开发的效率。
+
+
+
+
+
+-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+<!--        注入sqlsessionfactory-->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+<!--        扫描接口包-->
+        <property name="basePackage" value="com.jc.dao"/>
+    </bean>
+
+
+
+
+
+
+</beans>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="485d541b-8604-4509-9519-3d8eab373bb4" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GfnIwIhJmSO9Ey3c7f1zRRi1IN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Ioc-06/src/main/java/com/jc/aop/log" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\16697\Desktop\study_springboot_kuangshen-SSM\spring_study\Ioc-06\src\main\java\com\jc\aop\log" />
+      <recent name="C:\Users\16697\Desktop\study_springboot_kuangshen-SSM\spring_study\Ioc-06\src\main\java\com\jc\aop\diy" />
+      <recent name="C:\Users\16697\Desktop\study_springboot_kuangshen-SSM\spring_study\Ioc-06\src\main\java" />
+      <recent name="C:\Users\16697\Desktop\study_springboot_kuangshen-SSM\spring_study\Ioc-05\src\main\java\com\jc\aop" />
+      <recent name="C:\Users\16697\Desktop\study_springboot_kuangshen-SSM\spring_study\note\imgs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\16697\Desktop\study_springboot_kuangshen-SSM\spring_study\Ioc-06\src\main\resources" />
+      <recent name="C:\Users\16697\Desktop\study_springboot_kuangshen-SSM\spring_study\Ioc-05\src\main\java\com\jc\proxy_static\demo1" />
+      <recent name="C:\Users\16697\Desktop\study_springboot_kuangshen-SSM\spring_study\Ioc-05\src\main\java\com\jc\proxy_dynamic" />
+      <recent name="C:\Users\16697\Desktop\study_springboot_kuangshen-SSM\spring_study\Ioc-05\src\main\resources" />
+      <recent name="C:\Users\16697\Desktop\study_springboot_kuangshen-SSM\spring_study\Ioc-04\src\main\java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="com.jc.pojo" />
+      <recent name="com.jc.dao.impl" />
+      <recent name="com.jc.service.impl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestDemo.TestOne (3)">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jc.proxy_dynamic.Client" />
+      <module name="Ioc-05" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jc.proxy_dynamic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDemo.TestOne (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Ioc-03" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestDemo" />
+      <option name="METHOD_NAME" value="TestOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDemo.TestOne (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Ioc-05" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestDemo" />
+      <option name="METHOD_NAME" value="TestOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDemo.TestOne (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Ioc-06" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestDemo" />
+      <option name="METHOD_NAME" value="TestOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOne.testOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Ioc-04" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestOne" />
+      <option name="METHOD_NAME" value="testOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestDemo.TestOne (3)" />
+        <item itemvalue="JUnit.TestDemo.TestOne (2)" />
+        <item itemvalue="Application.Client" />
+        <item itemvalue="JUnit.TestOne.testOne" />
+        <item itemvalue="JUnit.TestDemo.TestOne (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="showFiles" value="false" />
+    <option name="showImplicitBeans" value="false" />
+    <option name="showDoc" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="485d541b-8604-4509-9519-3d8eab373bb4" name="Changes" comment="" />
+      <created>1666788432582</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666788432582</updated>
+      <workItem from="1666788434081" duration="4584000" />
+      <workItem from="1666874537706" duration="607000" />
+      <workItem from="1666878479616" duration="743000" />
+      <workItem from="1666921886411" duration="4762000" />
+      <workItem from="1667017501995" duration="3903000" />
+      <workItem from="1667043054701" duration="2696000" />
+      <workItem from="1667047227721" duration="7535000" />
+      <workItem from="1667098845055" duration="7939000" />
+      <workItem from="1667130732831" duration="6917000" />
+      <workItem from="1667141149899" duration="53000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Ioc-02/src/test/java/TestDemo.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Ioc-03/src/test/java/TestDemo.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Ioc-04/src/test/java/TestOne.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Ioc-06/src/main/java/com/jc/aop/diyAnnotation/AnnotationPointCut.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

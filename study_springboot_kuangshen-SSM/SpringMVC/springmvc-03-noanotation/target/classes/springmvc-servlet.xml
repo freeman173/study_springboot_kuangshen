@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--处理器映射器：-->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+<!--    处理器适配器-->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+
+<!--    视图解析器：themelaf freemaker……-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
+<!--        设置视图路径的前缀与后缀-->
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+<!--    将controller注册进来-->
+    <bean id="/hello" class="com.jc.controller.HelloController"/>
+    <bean id="/one" class="com.jc.controller.OneController"/>
+
+<!--
+
+
+     配置得到DispatcherServlet：
+        解析映射请求找到对应controller；
+        controller得到modelandview；
+        HandlerAdapter将controller执行结果ModelAndView返回给DispatcherServlet；
+        DispatcherServlet将ModelAndView传给ViewReslover视图解析器；
+        ViewReslover解析后返回具体的View视图（JSP / HTML）。
+        DispatcherServlet对View进行渲染视图（即将模型数据填充至视图中）。
+        DispatcherServlet响应用户，用户看到界面和数据。
+
+
+-->
+
+
+
+</beans>
