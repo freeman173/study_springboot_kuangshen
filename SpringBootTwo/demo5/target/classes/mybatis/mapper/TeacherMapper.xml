@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo5.mapper.TeacherMapper">
+
+
+
+
+    <select id="selectTeacherTwos" resultMap="TeacherStudent">
+        select s.id sid,s.name sname,t.id tid,t.name tname
+        from student2 s inner join teacher t on s.tid=t.id
+    </select>
+
+
+    <resultMap id="TeacherStudent" type="teacher2">
+        <result property="id" column="tid"/>
+        <result property="name" column="tname"/>
+<!--
+
+        collection，集合属性（包含多个对象的集合）
+             oftype：与collection标签使用，指定集合属性中的对象类型
+
+-->
+        <collection property="students" ofType="student2">
+            <id property="id" column="sid"/>
+            <result property="name" column="sname"/>
+            <result property="tid" column="tid"/>
+        </collection>
+    </resultMap>
+    
+    
+
+</mapper>
