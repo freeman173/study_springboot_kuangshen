@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo5.mapper.StudentGradeMapper">
+
+
+
+
+    <select id="selectStudents" resultType="student3">
+        select A.id as id,name,sex,age,height,grade
+        from student3 A inner join student3grade B on A.id=B.sid
+    </select>
+
+
+<!--
+
+条件查询：
+
+-->
+    <select id="selectStudentsByConditions" resultType="student3">
+        select A.id as id,name,sex,age,height,grade
+        from student3 A inner join student3grade B on A.id=B.sid
+        <where>
+            <if test="age !=null">
+                #{age}>age
+            </if>
+            <if test="grade !=null">
+                and grade >#{grade}
+            </if>
+        </where>
+
+    </select>
+
+
+</mapper>

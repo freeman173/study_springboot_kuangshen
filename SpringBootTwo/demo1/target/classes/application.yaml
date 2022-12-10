@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: jiangchao
+
+
+server:
+  port: 8081
+
+debug: false
+
+
+#自定义配置
+person:
+  age: 12
+  name: jiangchao
+
+
+helloservice:
+  age: 22
+  name: 蒋超是个人物

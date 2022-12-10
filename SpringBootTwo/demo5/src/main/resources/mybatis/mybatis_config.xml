@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+<configuration>
+
+
+<!--    //开启驼峰命名法映射规则-->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+<!--    起别名-->
+    <typeAliases>
+        <typeAlias type="com.example.demo5.pojo.Department" alias="dept"/>
+        <typeAlias  alias="student" type="com.example.demo5.pojo.Student"/>
+        <typeAlias  alias="teacher" type="com.example.demo5.pojo.Teacher"/>
+        <typeAlias  alias="student2" type="com.example.demo5.pojo.StudentTwo"/>
+        <typeAlias  alias="teacher2" type="com.example.demo5.pojo.TeacherTwo"/>
+        <typeAlias  alias="student3" type="com.example.demo5.pojo.StudentThree"/>
+    </typeAliases>
+
+
+</configuration>

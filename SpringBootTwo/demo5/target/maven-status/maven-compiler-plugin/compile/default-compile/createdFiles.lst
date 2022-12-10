@@ -1,0 +1,12 @@
+com\example\demo5\pojo\Teacher.class
+com\example\demo5\mapper\StudentGradeMapper.class
+com\example\demo5\mapper\StudentMapper.class
+com\example\demo5\pojo\Student.class
+com\example\demo5\pojo\StudentThree.class
+com\example\demo5\Demo5Application.class
+com\example\demo5\mapper\TeacherMapper.class
+com\example\demo5\params\ParamOne.class
+com\example\demo5\pojo\TeacherTwo.class
+com\example\demo5\pojo\StudentTwo.class
+com\example\demo5\pojo\Department.class
+com\example\demo5\mapper\DepartmentMapper.class
